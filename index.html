@@ -3,193 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Assistant - AI-Powered Learning</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>StudyBuddy - Your AI Study Assistant</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Left Sidebar Navigation -->
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar -->
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="logo">
-                <span class="logo-icon">🌸</span>
-                <span class="logo-text">Study Assistant</span>
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">StudyBuddy</span>
             </div>
             <button class="sidebar-toggle" id="sidebarToggle">
-                <span class="toggle-icon">←</span>
+                <i class="fas fa-bars"></i>
             </button>
         </div>
+        
         <div class="sidebar-menu">
-            <a href="#dashboard" class="nav-link active" data-page="dashboard">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-text">Dashboard</span>
+            <a href="#dashboard" class="menu-item active" data-page="dashboard">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Dashboard</span>
             </a>
-            <a href="#ai-assistant" class="nav-link" data-page="ai-assistant">
-                <span class="nav-icon">🤖</span>
-                <span class="nav-text">AI Assistant</span>
+            <a href="#ai-assistant" class="menu-item" data-page="ai-assistant">
+                <i class="fas fa-robot"></i>
+                <span class="menu-text">AI Assistant</span>
             </a>
-            <a href="#study-planner" class="nav-link" data-page="study-planner">
-                <span class="nav-icon">📅</span>
-                <span class="nav-text">Study Planner</span>
+            <a href="#study-planner" class="menu-item" data-page="study-planner">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="menu-text">Study Planner</span>
             </a>
-            <a href="#task-board" class="nav-link" data-page="task-board">
-                <span class="nav-icon">📋</span>
-                <span class="nav-text">Task Board</span>
+            <a href="#task-board" class="menu-item" data-page="task-board">
+                <i class="fas fa-tasks"></i>
+                <span class="menu-text">Task Board</span>
             </a>
-            <a href="#files" class="nav-link" data-page="files">
-                <span class="nav-icon">📁</span>
-                <span class="nav-text">Files</span>
+            <a href="#files" class="menu-item" data-page="files">
+                <i class="fas fa-folder"></i>
+                <span class="menu-text">Files & Resources</span>
             </a>
-            <a href="#payment" class="nav-link" data-page="payment">
-                <span class="nav-icon">💳</span>
-                <span class="nav-text">Payment</span>
+            <a href="#payments" class="menu-item" data-page="payments">
+                <i class="fas fa-credit-card"></i>
+                <span class="menu-text">Payments</span>
             </a>
-            <a href="#profile" class="nav-link" data-page="profile">
-                <span class="nav-icon">👤</span>
-                <span class="nav-text">Profile</span>
+            <a href="#profile" class="menu-item" data-page="profile">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Profile</span>
+            </a>
+            <a href="#rewards" class="menu-item" data-page="rewards">
+                <i class="fas fa-trophy"></i>
+                <span class="menu-text">Rewards</span>
             </a>
         </div>
+        
         <div class="sidebar-footer">
-            <button class="theme-toggle" id="themeToggle">
-                <span class="theme-icon">🌙</span>
-                <span class="theme-text">Dark Mode</span>
-            </button>
-            <div class="user-menu">
+            <div class="user-info">
                 <div class="user-avatar">
-                    <span>👩‍🎓</span>
+                    <i class="fas fa-user-circle"></i>
                 </div>
-                <div class="user-info">
-                    <span class="user-name">Student</span>
-                    <span class="user-status">Online</span>
+                <div class="user-details">
+                    <span class="user-name">Sarah</span>
+                    <span class="user-status">Premium Member</span>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" id="mainContent">
         <!-- Dashboard Page -->
         <div class="page active" id="dashboard">
-            <div class="container">
-                <!-- Greeting Card -->
-                <div class="greeting-card card fade-in">
+            <div class="page-header">
+                <h1 class="page-title">Welcome back, Sarah! 🌸</h1>
+                <p class="page-subtitle">Ready to make today amazing?</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Greeting Card with AI Assistant -->
+                <div class="greeting-card">
+                    <div class="ai-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="floating-hearts">
+                            <span class="heart">💖</span>
+                            <span class="heart">✨</span>
+                            <span class="heart">🌟</span>
+                        </div>
+                    </div>
                     <div class="greeting-content">
-                        <div class="greeting-text">
-                            <h1 class="greeting-title">Good morning, Sarah! 🌅</h1>
-                            <p class="greeting-subtitle">Ready to make today amazing? Let's start your study journey!</p>
-                        </div>
-                        <div class="ai-avatar">
-                            <div class="avatar-circle">
-                                <span class="avatar-emoji">🤖</span>
-                            </div>
-                            <div class="avatar-sparkles">
-                                <span class="sparkle">✨</span>
-                                <span class="sparkle">✨</span>
-                                <span class="sparkle">✨</span>
-                            </div>
-                        </div>
+                        <h2>Your Study Buddy is here!</h2>
+                        <p>I'm ready to help you ace your studies today. What would you like to work on?</p>
+                        <button class="btn-primary">Start Study Session</button>
                     </div>
                 </div>
 
                 <!-- Quick Access Tiles -->
                 <div class="quick-access">
-                    <h2 class="section-title">Quick Access</h2>
+                    <h3>Quick Access</h3>
                     <div class="tiles-grid">
-                        <div class="tile card bounce-in" data-delay="100">
-                            <div class="tile-icon">📚</div>
-                            <h3 class="tile-title">Continue Study Session</h3>
-                            <p class="tile-description">Resume your last study session</p>
-                            <div class="tile-progress">
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 65%"></div>
-                                </div>
-                                <span class="progress-text">65% Complete</span>
-                            </div>
+                        <div class="access-tile">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Continue Study Session</span>
                         </div>
-                        <div class="tile card bounce-in" data-delay="200">
-                            <div class="tile-icon">🤖</div>
-                            <h3 class="tile-title">Ask AI</h3>
-                            <p class="tile-description">Get instant help from your AI tutor</p>
-                            <button class="tile-btn">Start Chat</button>
+                        <div class="access-tile">
+                            <i class="fas fa-comments"></i>
+                            <span>Ask AI</span>
                         </div>
-                        <div class="tile card bounce-in" data-delay="300">
-                            <div class="tile-icon">⏰</div>
-                            <h3 class="tile-title">Check Reminders</h3>
-                            <p class="tile-description">View your upcoming deadlines</p>
-                            <div class="reminder-count">3 pending</div>
+                        <div class="access-tile">
+                            <i class="fas fa-bell"></i>
+                            <span>Check Reminders</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Payment Status Widget -->
-                <div class="payment-widget card slide-up">
+                <div class="payment-widget">
                     <div class="widget-header">
-                        <h3 class="widget-title">Subscription Status</h3>
-                        <span class="status-badge free">Free Plan</span>
+                        <h3>Subscription Status</h3>
+                        <span class="status-badge premium">Premium Active</span>
                     </div>
-                    <div class="widget-content">
-                        <p class="widget-description">Upgrade to unlock premium features and unlimited AI assistance!</p>
-                        <div class="upgrade-benefits">
-                            <div class="benefit">
-                                <span class="benefit-icon">✨</span>
-                                <span>Unlimited AI chats</span>
-                            </div>
-                            <div class="benefit">
-                                <span class="benefit-icon">📊</span>
-                                <span>Advanced analytics</span>
-                            </div>
-                            <div class="benefit">
-                                <span class="benefit-icon">🎯</span>
-                                <span>Priority support</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary upgrade-btn">Upgrade Now</button>
+                    <div class="payment-info">
+                        <p>Monthly Bloom Plan</p>
+                        <p class="renewal-date">Renews on Dec 15, 2024</p>
+                        <button class="btn-secondary">Manage Subscription</button>
                     </div>
                 </div>
 
                 <!-- Upcoming Deadlines -->
-                <div class="deadlines-section">
-                    <h2 class="section-title">Upcoming Deadlines</h2>
-                    <div class="deadlines-list">
-                        <div class="deadline-item card fade-in">
-                            <div class="deadline-subject math">📐</div>
-                            <div class="deadline-content">
-                                <h4 class="deadline-title">Calculus Assignment</h4>
-                                <p class="deadline-date">Due in 2 days</p>
+                <div class="deadlines-widget">
+                    <h3>Upcoming Deadlines</h3>
+                    <div class="deadline-list">
+                        <div class="deadline-item">
+                            <div class="deadline-icon math">
+                                <i class="fas fa-calculator"></i>
                             </div>
-                            <div class="deadline-priority high">High</div>
+                            <div class="deadline-content">
+                                <h4>Math Quiz</h4>
+                                <p>Tomorrow at 2:00 PM</p>
+                            </div>
                         </div>
-                        <div class="deadline-item card fade-in">
-                            <div class="deadline-subject english">📝</div>
-                            <div class="deadline-content">
-                                <h4 class="deadline-title">Literature Essay</h4>
-                                <p class="deadline-date">Due in 5 days</p>
+                        <div class="deadline-item">
+                            <div class="deadline-icon english">
+                                <i class="fas fa-book"></i>
                             </div>
-                            <div class="deadline-priority medium">Medium</div>
-                        </div>
-                        <div class="deadline-item card fade-in">
-                            <div class="deadline-subject science">🔬</div>
                             <div class="deadline-content">
-                                <h4 class="deadline-title">Chemistry Lab Report</h4>
-                                <p class="deadline-date">Due in 1 week</p>
+                                <h4>English Essay</h4>
+                                <p>Friday at 11:59 PM</p>
                             </div>
-                            <div class="deadline-priority low">Low</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Motivational Quote -->
-                <div class="quote-card card fade-in">
+                <div class="quote-widget">
                     <div class="quote-content">
-                        <div class="quote-icon">💫</div>
-                        <blockquote class="quote-text">
-                            "The future belongs to those who believe in the beauty of their dreams."
-                        </blockquote>
-                        <cite class="quote-author">- Eleanor Roosevelt</cite>
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Every expert was once a beginner. Every pro was once an amateur. Every icon was once an unknown."</p>
+                        <span class="quote-author">- Robin Sharma</span>
                     </div>
                 </div>
             </div>
@@ -197,65 +175,69 @@
 
         <!-- AI Assistant Page -->
         <div class="page" id="ai-assistant">
-            <div class="container">
-                <div class="ai-layout">
-                    <div class="chat-section">
-                        <div class="chat-header">
-                            <h2 class="chat-title">AI Study Assistant</h2>
-                            <div class="ai-status">
-                                <span class="status-dot online"></span>
-                                <span class="status-text">Online</span>
-                            </div>
+            <div class="page-header">
+                <h1 class="page-title">AI Study Assistant</h1>
+                <p class="page-subtitle">Your personal tutor is ready to help!</p>
+            </div>
+
+            <div class="ai-chat-container">
+                <div class="chat-interface">
+                    <div class="chat-header">
+                        <div class="ai-avatar-small">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <div class="chat-messages" id="chatMessages">
-                            <div class="message ai-message">
-                                <div class="message-avatar">🤖</div>
-                                <div class="message-content">
-                                    <p>Hello! I'm your AI study assistant. How can I help you today? I can help with:</p>
-                                    <ul>
-                                        <li>📚 Explaining difficult concepts</li>
-                                        <li>📝 Creating study notes</li>
-                                        <li>🧠 Generating practice quizzes</li>
-                                        <li>📅 Planning your study schedule</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="ai-info">
+                            <h3>Study Buddy</h3>
+                            <span class="status">Online</span>
                         </div>
-                        <div class="chat-input">
-                            <div class="input-container">
-                                <input type="text" id="chatInput" placeholder="Ask me anything about your studies...">
-                                <button class="send-btn" id="sendBtn">
-                                    <span>📤</span>
-                                </button>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
                             </div>
-                            <div class="quick-actions">
-                                <button class="quick-btn" data-message="Help me understand calculus derivatives">📐 Math Help</button>
-                                <button class="quick-btn" data-message="Create a study plan for my upcoming exams">📅 Study Plan</button>
-                                <button class="quick-btn" data-message="Generate a quiz about photosynthesis">🧠 Quiz Me</button>
+                            <div class="message-content">
+                                <p>Hi Sarah! I'm here to help you with your studies. What subject would you like to work on today?</p>
                             </div>
                         </div>
                     </div>
-                    <div class="suggestions-section">
-                        <h3 class="suggestions-title">Study Suggestions</h3>
-                        <div class="suggestions-list">
-                            <div class="suggestion-card card">
-                                <div class="suggestion-icon">📊</div>
-                                <h4 class="suggestion-title">Review Progress</h4>
-                                <p class="suggestion-description">Check your study analytics and identify areas for improvement.</p>
-                                <button class="suggestion-btn">View Analytics</button>
-                            </div>
-                            <div class="suggestion-card card">
-                                <div class="suggestion-icon">🎯</div>
-                                <h4 class="suggestion-title">Focus Session</h4>
-                                <p class="suggestion-description">Start a 25-minute focused study session with the Pomodoro technique.</p>
-                                <button class="suggestion-btn">Start Timer</button>
-                            </div>
-                            <div class="suggestion-card card">
-                                <div class="suggestion-icon">📝</div>
-                                <h4 class="suggestion-title">Create Notes</h4>
-                                <p class="suggestion-description">Generate structured notes from your recent study materials.</p>
-                                <button class="suggestion-btn">Generate Notes</button>
-                            </div>
+                    
+                    <div class="chat-input">
+                        <div class="input-container">
+                            <input type="text" id="messageInput" placeholder="Ask me anything about your studies...">
+                            <button class="send-btn" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="quick-responses">
+                            <button class="quick-btn">Generate Notes</button>
+                            <button class="quick-btn">Create Quiz</button>
+                            <button class="quick-btn">Study Tips</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="study-suggestions">
+                    <h3>Study Suggestions</h3>
+                    <div class="suggestion-cards">
+                        <div class="suggestion-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Math Review</h4>
+                            <p>Practice algebra problems from Chapter 5</p>
+                            <button class="btn-small">Start</button>
+                        </div>
+                        <div class="suggestion-card">
+                            <i class="fas fa-book-open"></i>
+                            <h4>English Reading</h4>
+                            <p>Read and analyze the assigned poem</p>
+                            <button class="btn-small">Start</button>
+                        </div>
+                        <div class="suggestion-card">
+                            <i class="fas fa-flask"></i>
+                            <h4>Science Lab</h4>
+                            <p>Review chemistry formulas and equations</p>
+                            <button class="btn-small">Start</button>
                         </div>
                     </div>
                 </div>
@@ -264,104 +246,120 @@
 
         <!-- Study Planner Page -->
         <div class="page" id="study-planner">
-            <div class="container">
-                <div class="planner-header">
-                    <h2 class="page-title">Study Planner</h2>
-                    <div class="view-toggle">
-                        <button class="toggle-btn active" data-view="monthly">Monthly</button>
-                        <button class="toggle-btn" data-view="weekly">Weekly</button>
-                    </div>
+            <div class="page-header">
+                <h1 class="page-title">Study Planner</h1>
+                <div class="view-toggle">
+                    <button class="toggle-btn active" data-view="monthly">Monthly</button>
+                    <button class="toggle-btn" data-view="weekly">Weekly</button>
                 </div>
-                <div class="calendar-container">
-                    <div class="calendar-header">
-                        <button class="nav-btn" id="prevMonth">‹</button>
-                        <h3 class="calendar-title" id="calendarTitle">December 2024</h3>
-                        <button class="nav-btn" id="nextMonth">›</button>
-                    </div>
-                    <div class="calendar-grid" id="calendarGrid">
-                        <!-- Calendar will be generated by JavaScript -->
-                    </div>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="nav-btn" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentMonth">December 2024</h2>
+                    <button class="nav-btn" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="study-suggestions">
-                    <h3 class="section-title">AI Study Suggestions</h3>
-                    <div class="suggestions-grid">
-                        <div class="suggestion-item card">
-                            <div class="suggestion-icon">📐</div>
-                            <h4>Review Algebra Today</h4>
-                            <p>Based on your progress, focus on quadratic equations for 30 minutes.</p>
-                        </div>
-                        <div class="suggestion-item card">
-                            <div class="suggestion-icon">📚</div>
-                            <h4>Literature Reading</h4>
-                            <p>Continue reading Chapter 5 of your assigned novel.</p>
-                        </div>
-                    </div>
+                
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="ai-suggestions">
+                <h3>AI Study Suggestions</h3>
+                <div class="suggestion-item">
+                    <i class="fas fa-robot"></i>
+                    <p>Revise Algebra today - you have a quiz tomorrow!</p>
+                </div>
+                <div class="suggestion-item">
+                    <i class="fas fa-robot"></i>
+                    <p>Complete your English essay draft</p>
                 </div>
             </div>
         </div>
 
         <!-- Task Board Page -->
         <div class="page" id="task-board">
-            <div class="container">
-                <h2 class="page-title">Task Board</h2>
-                <div class="kanban-board">
-                    <div class="kanban-column">
-                        <div class="column-header">
-                            <h3 class="column-title">To Review</h3>
-                            <span class="task-count">3</span>
-                        </div>
-                        <div class="task-list" data-status="todo">
-                            <div class="task-card card" draggable="true" data-task="1">
-                                <div class="task-tag math">Math</div>
-                                <h4 class="task-title">Complete Calculus Problems</h4>
-                                <p class="task-description">Solve problems 1-15 from Chapter 3</p>
-                                <div class="task-meta">
-                                    <span class="task-due">Due: Dec 15</span>
-                                    <span class="task-priority high">High</span>
-                                </div>
+            <div class="page-header">
+                <h1 class="page-title">Task Board</h1>
+                <button class="btn-primary">Add New Task</button>
+            </div>
+
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <h3>To Review</h3>
+                        <span class="task-count">3</span>
+                    </div>
+                    <div class="task-list" data-status="todo">
+                        <div class="task-card math">
+                            <div class="task-header">
+                                <span class="task-subject">Math</span>
+                                <i class="fas fa-ellipsis-h"></i>
                             </div>
-                            <div class="task-card card" draggable="true" data-task="2">
-                                <div class="task-tag english">English</div>
-                                <h4 class="task-title">Write Literature Essay</h4>
-                                <p class="task-description">Analyze themes in "To Kill a Mockingbird"</p>
-                                <div class="task-meta">
-                                    <span class="task-due">Due: Dec 18</span>
-                                    <span class="task-priority medium">Medium</span>
-                                </div>
+                            <h4>Complete Algebra Problems</h4>
+                            <p>Finish exercises 1-20 from Chapter 5</p>
+                            <div class="task-footer">
+                                <span class="due-date">Due: Tomorrow</span>
+                                <div class="task-priority high"></div>
+                            </div>
+                        </div>
+                        <div class="task-card english">
+                            <div class="task-header">
+                                <span class="task-subject">English</span>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <h4>Essay Draft</h4>
+                            <p>Write first draft of persuasive essay</p>
+                            <div class="task-footer">
+                                <span class="due-date">Due: Friday</span>
+                                <div class="task-priority medium"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="kanban-column">
-                        <div class="column-header">
-                            <h3 class="column-title">In Progress</h3>
-                            <span class="task-count">2</span>
-                        </div>
-                        <div class="task-list" data-status="progress">
-                            <div class="task-card card" draggable="true" data-task="3">
-                                <div class="task-tag science">Science</div>
-                                <h4 class="task-title">Chemistry Lab Report</h4>
-                                <p class="task-description">Document experiment results and analysis</p>
-                                <div class="task-meta">
-                                    <span class="task-due">Due: Dec 20</span>
-                                    <span class="task-priority medium">Medium</span>
-                                </div>
+                </div>
+
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <h3>In Progress</h3>
+                        <span class="task-count">2</span>
+                    </div>
+                    <div class="task-list" data-status="in-progress">
+                        <div class="task-card science">
+                            <div class="task-header">
+                                <span class="task-subject">Science</span>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <h4>Chemistry Lab Report</h4>
+                            <p>Analyze results from yesterday's experiment</p>
+                            <div class="task-footer">
+                                <span class="due-date">Due: Next Week</span>
+                                <div class="task-priority low"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="kanban-column">
-                        <div class="column-header">
-                            <h3 class="column-title">Completed</h3>
-                            <span class="task-count">5</span>
-                        </div>
-                        <div class="task-list" data-status="completed">
-                            <div class="task-card card completed" draggable="true" data-task="4">
-                                <div class="task-tag history">History</div>
-                                <h4 class="task-title">World War II Research</h4>
-                                <p class="task-description">Research paper on major battles</p>
-                                <div class="task-meta">
-                                    <span class="task-completed">Completed: Dec 10</span>
-                                    <span class="task-priority low">Low</span>
-                                </div>
+                </div>
+
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <h3>Completed</h3>
+                        <span class="task-count">5</span>
+                    </div>
+                    <div class="task-list" data-status="completed">
+                        <div class="task-card completed">
+                            <div class="task-header">
+                                <span class="task-subject">History</span>
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h4>World War II Notes</h4>
+                            <p>Summarize key events and causes</p>
+                            <div class="task-footer">
+                                <span class="completed-date">Completed: Yesterday</span>
                             </div>
                         </div>
                     </div>
@@ -371,160 +369,152 @@
 
         <!-- Files & Resources Page -->
         <div class="page" id="files">
-            <div class="container">
-                <div class="files-header">
-                    <h2 class="page-title">Files & Resources</h2>
-                    <button class="btn btn-primary upload-btn">
-                        <span class="btn-icon">📤</span>
-                        Upload Files
-                    </button>
-                </div>
+            <div class="page-header">
+                <h1 class="page-title">Files & Resources</h1>
+                <button class="btn-primary">Upload Files</button>
+            </div>
+
+            <div class="files-container">
                 <div class="upload-zone" id="uploadZone">
                     <div class="upload-content">
-                        <div class="upload-icon">📁</div>
-                        <h3 class="upload-title">Drag & Drop Files Here</h3>
-                        <p class="upload-description">or click to browse</p>
-                        <div class="upload-sparkles">
-                            <span class="sparkle">✨</span>
-                            <span class="sparkle">✨</span>
-                            <span class="sparkle">✨</span>
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drag & Drop Files Here</h3>
+                        <p>or click to browse</p>
+                        <div class="sparkles">
+                            <span>✨</span>
+                            <span>✨</span>
+                            <span>✨</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="files-grid">
-                    <div class="file-card card">
-                        <div class="file-icon pdf">📄</div>
-                        <h4 class="file-name">Calculus_Notes.pdf</h4>
-                        <p class="file-size">2.3 MB</p>
+                    <div class="file-card">
+                        <div class="file-icon pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Math_Chapter_5.pdf</h4>
+                        <p>2.3 MB • Added 2 days ago</p>
                         <div class="file-actions">
-                            <button class="file-btn">👁️</button>
-                            <button class="file-btn">⬇️</button>
-                            <button class="file-btn">🗑️</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-download"></i></button>
                         </div>
                     </div>
-                    <div class="file-card card">
-                        <div class="file-icon doc">📝</div>
-                        <h4 class="file-name">Literature_Essay.docx</h4>
-                        <p class="file-size">1.1 MB</p>
+                    
+                    <div class="file-card">
+                        <div class="file-icon doc">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h4>English_Essay_Draft.docx</h4>
+                        <p>1.1 MB • Added 1 week ago</p>
                         <div class="file-actions">
-                            <button class="file-btn">👁️</button>
-                            <button class="file-btn">⬇️</button>
-                            <button class="file-btn">🗑️</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-download"></i></button>
                         </div>
                     </div>
-                    <div class="file-card card">
-                        <div class="file-icon img">🖼️</div>
-                        <h4 class="file-name">Chemistry_Diagram.png</h4>
-                        <p class="file-size">856 KB</p>
+                    
+                    <div class="file-card">
+                        <div class="file-icon image">
+                            <i class="fas fa-file-image"></i>
+                        </div>
+                        <h4>Chemistry_Formulas.jpg</h4>
+                        <p>856 KB • Added 3 days ago</p>
                         <div class="file-actions">
-                            <button class="file-btn">👁️</button>
-                            <button class="file-btn">⬇️</button>
-                            <button class="file-btn">🗑️</button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn"><i class="fas fa-download"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Payment Page -->
-        <div class="page" id="payment">
-            <div class="container">
-                <h2 class="page-title">Subscription Plans</h2>
-                <div class="plans-grid">
-                    <div class="plan-card card">
+        <!-- Payments Page -->
+        <div class="page" id="payments">
+            <div class="page-header">
+                <h1 class="page-title">Payments & Subscription</h1>
+            </div>
+
+            <div class="payments-container">
+                <div class="current-plan">
+                    <h3>Current Plan</h3>
+                    <div class="plan-card active">
                         <div class="plan-header">
-                            <div class="plan-icon">🌸</div>
-                            <h3 class="plan-name">Weekly Blossom</h3>
-                            <div class="plan-price">
-                                <span class="price">$2.99</span>
-                                <span class="period">/week</span>
-                            </div>
+                            <h4>Monthly Bloom 🌷</h4>
+                            <span class="plan-price">$9.99/month</span>
                         </div>
-                        <div class="plan-features">
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Unlimited AI chats</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Study analytics</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Priority support</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-outline plan-btn">Choose Plan</button>
-                    </div>
-                    <div class="plan-card card featured">
-                        <div class="plan-badge">Most Popular</div>
-                        <div class="plan-header">
-                            <div class="plan-icon">🌷</div>
-                            <h3 class="plan-name">Monthly Bloom</h3>
-                            <div class="plan-price">
-                                <span class="price">$9.99</span>
-                                <span class="period">/month</span>
-                            </div>
-                        </div>
-                        <div class="plan-features">
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Everything in Weekly</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Advanced AI features</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Custom study plans</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary plan-btn">Choose Plan</button>
-                    </div>
-                    <div class="plan-card card">
-                        <div class="plan-header">
-                            <div class="plan-icon">🌼</div>
-                            <h3 class="plan-name">Semester Pass</h3>
-                            <div class="plan-price">
-                                <span class="price">$49.99</span>
-                                <span class="period">/semester</span>
-                            </div>
-                        </div>
-                        <div class="plan-features">
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Everything in Monthly</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Group study features</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">✅</span>
-                                <span>Exam preparation tools</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-outline plan-btn">Choose Plan</button>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Unlimited AI assistance</li>
+                            <li><i class="fas fa-check"></i> Advanced study planner</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <button class="btn-secondary">Manage Plan</button>
                     </div>
                 </div>
+
+                <div class="available-plans">
+                    <h3>Available Plans</h3>
+                    <div class="plans-grid">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h4>Weekly Blossom 🌸</h4>
+                                <span class="plan-price">$2.99/week</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Basic AI assistance</li>
+                                <li><i class="fas fa-check"></i> Study planner</li>
+                                <li><i class="fas fa-times"></i> Priority support</li>
+                            </ul>
+                            <button class="btn-outline">Choose Plan</button>
+                        </div>
+                        
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h4>Semester Pass 🌼</h4>
+                                <span class="plan-price">$49.99/semester</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Unlimited AI assistance</li>
+                                <li><i class="fas fa-check"></i> Advanced study planner</li>
+                                <li><i class="fas fa-check"></i> Priority support</li>
+                                <li><i class="fas fa-check"></i> Exclusive features</li>
+                            </ul>
+                            <button class="btn-outline">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="payment-methods">
-                    <h3 class="section-title">Payment Methods</h3>
+                    <h3>Payment Methods</h3>
                     <div class="payment-options">
-                        <div class="payment-option card">
-                            <div class="payment-icon">📱</div>
-                            <h4>Mobile Money</h4>
-                            <p>Pay with M-Pesa, Airtel Money, or other mobile payment services</p>
+                        <div class="payment-option">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Money (M-Pesa)</span>
                         </div>
-                        <div class="payment-option card">
-                            <div class="payment-icon">💳</div>
-                            <h4>Credit/Debit Card</h4>
-                            <p>Secure payment with Visa, Mastercard, or other major cards</p>
+                        <div class="payment-option">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Airtel Money</span>
                         </div>
-                        <div class="payment-option card">
-                            <div class="payment-icon">📞</div>
-                            <h4>Airtime</h4>
-                            <p>Convert your airtime balance to subscription credits</p>
+                        <div class="payment-option">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Credit/Debit Card</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-history">
+                    <h3>Payment History</h3>
+                    <div class="history-list">
+                        <div class="history-item">
+                            <div class="history-info">
+                                <h4>Monthly Bloom Plan</h4>
+                                <p>November 15, 2024</p>
+                            </div>
+                            <div class="history-amount">
+                                <span>$9.99</span>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -533,192 +523,196 @@
 
         <!-- Profile Page -->
         <div class="page" id="profile">
-            <div class="container">
-                <div class="profile-layout">
-                    <div class="profile-sidebar">
-                        <div class="profile-card card">
-                            <div class="profile-avatar">
-                                <div class="avatar-circle large">
-                                    <span class="avatar-emoji">👩‍🎓</span>
-                                </div>
-                                <button class="avatar-edit">✏️</button>
-                            </div>
-                            <h3 class="profile-name">Sarah Johnson</h3>
-                            <p class="profile-email">sarah.johnson@email.com</p>
-                            <div class="profile-stats">
-                                <div class="stat">
-                                    <span class="stat-number">127</span>
-                                    <span class="stat-label">Study Hours</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">23</span>
-                                    <span class="stat-label">Tasks Completed</span>
-                                </div>
-                            </div>
+            <div class="page-header">
+                <h1 class="page-title">Profile & Settings</h1>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                        <button class="edit-avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Sarah Johnson</h2>
+                        <p>sarah.johnson@email.com</p>
+                        <span class="member-since">Member since October 2024</span>
+                    </div>
+                </div>
+
+                <div class="settings-sections">
+                    <div class="settings-section">
+                        <h3>Personalization</h3>
+                        <div class="setting-item">
+                            <label>Nickname</label>
+                            <input type="text" value="Sarah" class="setting-input">
                         </div>
-                        <div class="theme-settings card">
-                            <h4 class="settings-title">Theme Preferences</h4>
-                            <div class="theme-options">
-                                <button class="theme-option active" data-theme="light">
-                                    <div class="theme-preview light"></div>
-                                    <span>Light</span>
-                                </button>
-                                <button class="theme-option" data-theme="dark">
-                                    <div class="theme-preview dark"></div>
-                                    <span>Dark</span>
-                                </button>
+                        <div class="setting-item">
+                            <label>Theme Color</label>
+                            <div class="color-options">
+                                <button class="color-option active" data-color="pink"></button>
+                                <button class="color-option" data-color="lavender"></button>
+                                <button class="color-option" data-color="cream"></button>
                             </div>
                         </div>
                     </div>
-                    <div class="profile-content">
-                        <div class="settings-section">
-                            <h3 class="section-title">Settings</h3>
-                            <div class="settings-group">
-                                <h4 class="group-title">Notifications</h4>
-                                <div class="setting-item">
-                                    <div class="setting-info">
-                                        <h5 class="setting-name">Study Reminders</h5>
-                                        <p class="setting-description">Get notified about upcoming study sessions</p>
-                                    </div>
-                                    <label class="toggle-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="toggle-slider"></span>
-                                    </label>
-                                </div>
-                                <div class="setting-item">
-                                    <div class="setting-info">
-                                        <h5 class="setting-name">Deadline Alerts</h5>
-                                        <p class="setting-description">Receive notifications for upcoming deadlines</p>
-                                    </div>
-                                    <label class="toggle-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="toggle-slider"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="settings-group">
-                                <h4 class="group-title">AI Preferences</h4>
-                                <div class="setting-item">
-                                    <div class="setting-info">
-                                        <h5 class="setting-name">Study Suggestions</h5>
-                                        <p class="setting-description">Allow AI to suggest study topics and schedules</p>
-                                    </div>
-                                    <label class="toggle-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="toggle-slider"></span>
-                                    </label>
-                                </div>
+
+                    <div class="settings-section">
+                        <h3>Notifications</h3>
+                        <div class="setting-item">
+                            <label>Study Reminders</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="studyReminders" checked>
+                                <label for="studyReminders"></label>
                             </div>
                         </div>
-                        <div class="achievements-section">
-                            <h3 class="section-title">Achievements</h3>
-                            <div class="achievements-grid">
-                                <div class="achievement-card card">
-                                    <div class="achievement-icon">🌸</div>
-                                    <h4 class="achievement-name">Fast Learner</h4>
-                                    <p class="achievement-description">Completed 10 tasks in one day</p>
-                                </div>
-                                <div class="achievement-card card">
-                                    <div class="achievement-icon">🌷</div>
-                                    <h4 class="achievement-name">Consistency Queen</h4>
-                                    <p class="achievement-description">Studied for 7 consecutive days</p>
-                                </div>
-                                <div class="achievement-card card">
-                                    <div class="achievement-icon">🌼</div>
-                                    <h4 class="achievement-name">Task Master</h4>
-                                    <p class="achievement-description">Completed 50 tasks total</p>
-                                </div>
+                        <div class="setting-item">
+                            <label>Deadline Alerts</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="deadlineAlerts" checked>
+                                <label for="deadlineAlerts"></label>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>AI Preferences</h3>
+                        <div class="setting-item">
+                            <label>AI Assistant Name</label>
+                            <input type="text" value="Study Buddy" class="setting-input">
+                        </div>
+                        <div class="setting-item">
+                            <label>Study Tips Frequency</label>
+                            <select class="setting-select">
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>As needed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rewards Page -->
+        <div class="page" id="rewards">
+            <div class="page-header">
+                <h1 class="page-title">Motivation & Rewards</h1>
+            </div>
+
+            <div class="rewards-container">
+                <div class="progress-section">
+                    <h3>Study Progress</h3>
+                    <div class="progress-vine">
+                        <div class="vine-segment completed">
+                            <div class="segment-icon">🌸</div>
+                            <span>Week 1</span>
+                        </div>
+                        <div class="vine-segment completed">
+                            <div class="segment-icon">🌷</div>
+                            <span>Week 2</span>
+                        </div>
+                        <div class="vine-segment current">
+                            <div class="segment-icon">🌼</div>
+                            <span>Week 3</span>
+                        </div>
+                        <div class="vine-segment">
+                            <div class="segment-icon">🌻</div>
+                            <span>Week 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="badges-section">
+                    <h3>Your Badges</h3>
+                    <div class="badges-grid">
+                        <div class="badge earned">
+                            <div class="badge-icon">🌸</div>
+                            <h4>Fast Learner</h4>
+                            <p>Completed 5 tasks in one day</p>
+                        </div>
+                        <div class="badge earned">
+                            <div class="badge-icon">🌷</div>
+                            <h4>Consistency Queen</h4>
+                            <p>7-day study streak</p>
+                        </div>
+                        <div class="badge locked">
+                            <div class="badge-icon">🌼</div>
+                            <h4>Task Master</h4>
+                            <p>Complete 50 tasks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="motivation-section">
+                    <h3>Daily Motivation</h3>
+                    <div class="motivation-card">
+                        <div class="motivation-content">
+                            <i class="fas fa-heart"></i>
+                            <p>"You're doing amazing! Keep up the great work with your studies. Every small step counts towards your big dreams!"</p>
+                            <span class="motivation-author">- Your Study Buddy</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
- 
-    <!-- Login Modal -->
-    <div class="modal" id="loginModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Welcome Back! 🌸</h2>
-                <button class="modal-close" id="closeLoginModal">&times;</button>
+
+    <!-- Authentication Modals -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2 id="authTitle">Welcome to StudyBuddy</h2>
+                <button class="close-auth" id="closeAuth">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="modal-body">
+            
+            <div class="auth-content" id="authContent">
+                <!-- Login Form -->
                 <form class="auth-form" id="loginForm">
                     <div class="form-group">
-                        <label for="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" required>
+                        <label>Email</label>
+                        <input type="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" required>
+                        <label>Password</label>
+                        <input type="password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                    <button type="submit" class="btn-primary">Sign In</button>
+                    <div class="auth-links">
+                        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                        <a href="#" id="signupLink">Don't have an account? Sign up</a>
+                    </div>
                 </form>
-                <div class="auth-links">
-                    <a href="#" id="showSignupModal">Don't have an account? Sign up</a>
-                    <a href="#" id="showForgotModal">Forgot password?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Signup Modal -->
-    <div class="modal" id="signupModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Join Study Assistant! 🌷</h2>
-                <button class="modal-close" id="closeSignupModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form class="auth-form" id="signupForm">
-                    <div class="form-group">
-                        <label for="signupName">Full Name</label>
-                        <input type="text" id="signupName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupEmail">Email</label>
-                        <input type="email" id="signupEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupPassword">Password</label>
-                        <input type="password" id="signupPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Create Account</button>
-                </form>
-                <div class="auth-links">
-                    <a href="#" id="showLoginModal">Already have an account? Sign in</a>
-                </div>
             </div>
         </div>
     </div>
     
-    <!-- Forgot Password Modal -->
-    <div class="modal" id="forgotModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Reset Password 🌼</h2>
-                <button class="modal-close" id="closeForgotModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form class="auth-form" id="forgotForm">
-                    <div class="form-group">
-                        <label for="forgotEmail">Email</label>
-                        <input type="email" id="forgotEmail" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Reset Link</button>
-                </form>
-                <div class="auth-links">
-                    <a href="#" id="showLoginModalFromForgot">Back to Sign In</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // Example: fetching data from Flask API
+fetch(" https://hackon3-0-server.onrender.com ")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // { message: "Hello from Flask!" }
+    document.getElementById("output").innerText = data.message;
+  })
+  .catch(error => console.error("Error:", error));
 
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/calendar.js"></script>
-    <script src="js/chat.js"></script>
-    <script src="js/dragdrop.js"></script>
+  fetch("https://hackon3-0-server.onrender.com ", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ username: "test", password: "1234" })
+})
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err));
+</script>
 </body>
 </html>
